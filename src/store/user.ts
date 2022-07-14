@@ -1,13 +1,15 @@
-export const state = {
-    LobbyInfo: {
-    },
+import { Lang } from '@/types/lang'
+interface State {
+  lang:Lang,
+}
+export const state:State = {
+    lang: Lang['zh-CN']
   };
   export const actions = {}
   
   export const mutations = {
-    LobbyInfo(state:any, payload:any) { //接收wbSocket的訊息
-      state.LobbyInfo=payload
-      console.log("vuex-lobby資料更新",state.LobbyInfo)
+    setLang(state:any, payload:Lang) { 
+      state.lang=payload
     },
   };
   export const getters = {}

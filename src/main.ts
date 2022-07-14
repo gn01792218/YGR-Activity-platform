@@ -3,4 +3,5 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './assets/style/style.css'
-createApp(App).use(router).use(store).mount('#app')
+import i18 from './i18n/index'
+createApp(App).use(router).use(store).use(i18).mount('#app')
